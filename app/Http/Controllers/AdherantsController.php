@@ -22,12 +22,6 @@ class AdherantsController extends Controller
         return view('adherants.index',compact('adherants'));
     }
 
-    public function test( Adherant $adherant)
-    {
-       //$adherant = Adherant::find($id);
-        return view('adherants.test',compact('adherant'));
-    }
-
     public function userId($id)
     {
        $user = Auth::user()->id;
@@ -36,26 +30,11 @@ class AdherantsController extends Controller
 
     public function show( Adherant $adherant)
     {
-	   //$adherant = Adherant::find($id);
+       //$adherant = Adherant::find($id);
         return view('adherants.show',compact('adherant'));
     }
 
-    public function edit( Adherant $adherant)
-    {
-        $adherant = Adherant::find($id);
-
-        return view('adherants.edit',compact('adherant'));
-    }
-
-    public function update(Request $req , $id)
-    {
-        $adherant = Adherant::findOrFail($id);
-        $adherant->update($req->all());
-
-        return redirect('adherants');
-    }
-
-      public function create()
+    public function create()
     {
         return view('adherants.create');
     }
@@ -73,8 +52,21 @@ class AdherantsController extends Controller
         $adherant->save();
 
         return redirect('adherants');
+    }
 
+    public function edit( Adherant $adherant)
+    {
+        $adherant = Adherant::find($id);
 
+        return view('adherants.edit',compact('adherant'));
+    }
+
+    public function update(Request $req , $id)
+    {
+        $adherant = Adherant::findOrFail($id);
+        $adherant->update($req->all());
+
+        return redirect('adherants');
     }
 
    public function destroy($id) {
@@ -82,6 +74,12 @@ class AdherantsController extends Controller
       return redirect('adherants');
    }
 
+
+    public function test( Adherant $adherant)
+    {
+       //$adherant = Adherant::find($id);
+        return view('adherants.test',compact('adherant'));
+    }
 
 
 

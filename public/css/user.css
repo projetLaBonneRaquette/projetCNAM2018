@@ -1,0 +1,157 @@
+/*------------------------------------------------------------*/
+/*                          login                             */
+/*------------------------------------------------------------*/
+
+#login{
+	top: -200px;
+	height: 700px;
+	max-width: 100%;
+	padding-top: 12em;
+	position:relative;
+	margin-bottom: -14.5em;
+	background-size: cover;
+	background-position: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url(/images/tennis.jpg);
+}
+#login .col-md-8 {
+    max-width: 75%;
+}
+
+@media (min-width: 768px){
+  #login {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+  }
+}
+
+@media (min-width: 992px){
+  #login {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+  }
+}
+@media (min-width: 992px){
+  #login .col-md-8 {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1200px){
+  #login {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+  }
+}
+@media (min-width: 1200px){
+  #login .col-md-8 {
+    max-width: 40%;
+  }
+}
+
+/*------------------------------------------------------------*/
+/*                          register                         */
+/*------------------------------------------------------------*/
+
+#register{
+    top: -200px;
+    height: 700px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -14.5em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+}
+#register .col-md-8 {
+    max-width: 75%;
+}
+
+@media (min-width: 768px){
+  #register {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+  }
+}
+
+@media (min-width: 992px){
+  #register {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+  }
+}
+@media (min-width: 992px){
+  #register .col-md-8 {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1200px){
+  #register {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/tennis.jpg);
+  }
+}
+@media (min-width: 1200px){
+  #register .col-md-8 {
+    max-width: 40%;
+  }
+}

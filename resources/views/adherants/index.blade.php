@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="accordion" class="container">
+<div id="adherants" class="container">
 
     @foreach ($adherants as $adherant)
     <div class="card col-md-12">
@@ -21,9 +21,9 @@
                 <!-- <a href='/adherants/edit/{{$adherant->id}}'>Modifier</a> -->
                 <!-- Button trigger modal -->
                 @if(!Auth::guest())
-                    @if(Auth::user()->id == $adherant->user_id)
-                        <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#{{$adherant->last_name}}">Modifier</button>
-                    @endif
+                @if(Auth::user()->id == $adherant->user_id)
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#{{$adherant->last_name}}">Modifier</button>
+                @endif
                 @endif
             </div>
         </div>
@@ -64,16 +64,16 @@
                         </div>    
 
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <form method="POST" action="delete/{{ $adherant->id }}">
+                            {{csrf_field()}}
+                            {{method_field('PUT')}}
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </div>
                 </form>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <form method="POST" action="delete/{{ $adherant->id }}">
-                        {{csrf_field()}}
-                        {{method_field('PUT')}}
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                    </form>
-                </div>
             </div>
         </div>
     </div>

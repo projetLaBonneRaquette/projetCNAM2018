@@ -17,11 +17,12 @@
                     @endif
 
                     You are logged in!
+                    
+                    @endif
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endif
 
 @endsection

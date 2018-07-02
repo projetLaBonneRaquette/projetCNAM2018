@@ -1,0 +1,67 @@
+.pagination {
+	margin-top: 1em;	
+}
+
+button.btn:active{
+	background: #007bff;
+}
+
+#adherants{
+	top: -200px;
+	height: 700px;
+	max-width: 100%;
+	padding-top: 12em;
+	position:relative;
+	margin-bottom: -14.5em;
+	background-size: cover;
+	background-position: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-image: url(/images/t2.jpg);
+}
+
+@media (min-width: 768px){
+  #adherants {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/t2.jpg);
+  }
+}
+@media (min-width: 992px){
+  #adherants {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/t2.jpg);
+  }
+}
+@media (min-width: 1200px){
+  #adherants {
+    top: -200px;
+    height: 800px;
+    max-width: 100%;
+    padding-top: 12em;
+    position:relative;
+    margin-bottom: -10em;
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/images/t2.jpg);
+  }
+}
