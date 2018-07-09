@@ -17,10 +17,25 @@ use App\User;
 Route::get('/', function () {
 	$users = User::all();
 
+	$events = [];
+
+	$events[] = \Calendar::event(
+	    'Event One',
+	    true,
+	    '2015-02-11T0800',
+	    '2015-02-12T0800',
+		0
+	);
+
+	$calendar = \Calendar::addEvents($events)
+					->setOptions([
+						'sunday' => 1
+					])->setCallbacks([ ]);
+
 	if ($users)
-	    return view('home');
+	    return view('home', compact('calendar'));
 	
-	return view('welcome');
+	return view('welcome', compact('calendar'));
 });
 
 // Authentication
@@ -44,3 +59,10 @@ Route::put('/adherant/update/{adherant}', 'AdherantsController@update');
 Route::put('/delete/{adherant}', 'AdherantsController@destroy');
 //Route::post('/adherants/{adherant}', 'AdherantsController@update');
 //Route::get('adherants/delete/{id}', 'AdherantsController@destroy');
+
+// reservation
+Route::get('/reservation', 'ReservationController@index');
+Route::get('/reserve', 'ReservationController@createReserve');
+Route::post('/reserve', 'ReservationController@storeReserve');
+Route::get('/terrain', 'ReservationController@createTerra');
+Route::post('/terrain', 'ReservationController@storeTerra');
