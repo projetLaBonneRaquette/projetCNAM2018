@@ -15,15 +15,18 @@ use App\User;
 
 // Default
 Route::get('/', function () {
-	$users = User::all();
 
-	if ($users){
-	    return view('home');
-	}
 	
-	else {
-		return view('welcome');
-	}
+	
+	    if (auth()->guest()) {
+        return view('welcome');
+        
+    }
+    	$users = User::all();
+
+	    return view('home');
+
+	
 });
 
 // Authentication
