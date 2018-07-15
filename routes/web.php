@@ -17,10 +17,13 @@ use App\User;
 Route::get('/', function () {
 	$users = User::all();
 
-	if ($users)
+	if ($users){
 	    return view('home');
+	}
 	
-	return view('welcome');
+	else {
+		return view('welcome');
+	}
 });
 
 // Authentication

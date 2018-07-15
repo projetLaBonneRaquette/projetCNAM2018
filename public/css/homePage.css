@@ -1,0 +1,251 @@
+ .parallax {
+  /* The image used */
+  /*background-image: url("../tennis1.jpg");*/
+
+  /* Set a specific height */
+  min-height: 500px; 
+  background-color: #002A12;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#carouselExampleIndicators{
+  max-height: 500px;
+}
+
+#carouselExampleIndicators img{
+  max-height: 500px;
+}
+
+
+.parallax2 {
+  /* The image used */
+  background-image: url('../images/tennis1.jpg');
+
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .parallax2 {
+    /* The image used */
+    background-image: url('../images/tennis1.jpg');
+
+    /* Full height */
+    height: 270%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    text-align: center;
+  }
+}
+
+.parallax3 {
+  /* The image used */
+  background-image: url('../images/tennis3.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color:white;
+
+
+
+}
+
+.inter{
+
+  padding: 50px;
+  opacity: 1;
+
+  padding-top: 0px;
+  padding-bottom: 30px;
+
+
+}
+
+.user{
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+
+span {
+  animation-duration: 3s;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+
+}
+
+
+.bo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+
+}
+
+.user{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.fadeInUp{
+
+  color: white;
+}
+.cont {
+  position: relative;
+  opacity: 0.6;
+}
+
+.res {
+  position: relative;
+  width: 100%;
+  opacity: 0.6;
+  height: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+}
+
+.cont:hover {
+  opacity: 1;
+}
+.res:hover {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+
+}
+
+.overlayRes {
+ position: absolute;
+
+ left: 30%;
+ right: 0;
+ overflow: hidden;
+ width: 100%;
+
+ transition: .5s ease;
+
+}
+
+.cont:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+.res:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.textTour {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.textUder {
+  color: white;
+
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.events{
+  list-style: none;
+  list-style: none;
+  color: black;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-left-width: 50px;
+  margin-left: 0px;
+}
+
+.events li{
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-left-width: 50px;
+
+}
+
+#contact{
+  padding: 60px 0;
+  height: 600px;
+}
+
+.py-4{
+  padding-bottom: 0px !important;
+    padding-top: 0px !important;
+}
