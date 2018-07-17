@@ -16,37 +16,20 @@ class ReservationController extends Controller
     //
     public function index()
     {
-    	$terrains = Terrain::all();
     	$adherants = Adherant::all();
-    	$reserves  = Reservation::all();
+    	$reserves = Reservation::all();
+        $terrains = Terrain::all();
+        $terrain1 = 'Terrain 1';
+        $terrain2 = 'Terrain 2';
+        $terrain3 = 'Terrain 3';
 
-    	$events = [];
-
-    	foreach ($reserves as $key => $reserve) {
-    		foreach ($terrains as $key => $terrain) {
-    			if($reserve->terrain_id == $terrain->id){
-    				foreach ($adherants as $key => $adherant) {
-    					if ($reserve->adherant_id == $adherant->id){
-    						$events[] = \Calendar::event(
-		    					$adherant->first_name.' '.$adherant->last_name,
-		    					true,
-		    					$reserve->date.'T'.$reserve->heure_debut,
-		    					$reserve->date.'T'.$reserve->heure_fin,
-								$reserve->id
-							);
-    					}
-    				}
-    			}
-    		}
-    	}		
-
-		$calendar = \Calendar::addEvents($events)
-						->setOptions([
-							'sunday' => 1
-						])->setCallbacks([ ]);
-
-        return view('home',['calendar' => $calendar, 'reserves' => $reserves, 'adherants' => $adherants, 'terrains' => $terrains]);
-        // return view('reservation.index',compact('reservation'));
+        return view('home',['reserves' => $reserves,
+                            'terrains' => $terrains,
+                            'terrain1' => $terrain1,
+                            'terrain2' => $terrain2,
+                            'terrain3' => $terrain3,
+                            'adherants' => $adherants
+                        ]);
     }
 
     public function createTerra()

@@ -12,30 +12,31 @@
 */
 
 use App\User;
+use App\Terrain;
+use App\Adherant;
+use App\Reservation;
 
 // Default
 Route::get('/', function () {
 	$users = User::all();
+    $terrain1 = 'Terrain 1';
+    $terrain2 = 'Terrain 2';
+    $terrain3 = 'Terrain 3';
+    $terrains = Terrain::all();
+	$adherants = Adherant::all();
+    $reserves = Reservation::all();
 
-	$events = [];
-
-	$events[] = \Calendar::event(
-	    'Event One',
-	    true,
-	    '2015-02-11T0800',
-	    '2015-02-12T0800',
-		0
-	);
-
-	$calendar = \Calendar::addEvents($events)
-					->setOptions([
-						'sunday' => 1
-					])->setCallbacks([ ]);
 
 	if ($users)
-	    return view('home', compact('calendar'));
+        return view('home',['reserves' => $reserves,
+                            'terrains' => $terrains,
+                            'terrain1' => $terrain1,
+                            'terrain2' => $terrain2,
+                            'terrain3' => $terrain3,
+                            'adherants' => $adherants
+                        ]);
 	
-	return view('welcome', compact('calendar'));
+	return view('welcome');
 });
 
 // Authentication
