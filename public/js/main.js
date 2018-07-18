@@ -2,7 +2,7 @@ $( document ).ready(function() {
 
     // declaration of values for
     // page size, current page, pages length, nav and total pages 
-    pageSize = 3;
+    pageSize = 10;
     pagesCount = $(".card").length;
     var currentPage = 1;
 
