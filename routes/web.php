@@ -26,9 +26,13 @@ Route::get('/', function () {
 	$adherants = Adherant::all();
     $reserves = Reservation::all();
 
+    $date = date("d-m-Y");
+    $time = date("H:i");
 
 	if ($users)
-        return view('home',['reserves' => $reserves,
+        return view('home',['date' => $date,
+                            'time' => $time,
+                            'reserves' => $reserves,
                             'terrains' => $terrains,
                             'terrain1' => $terrain1,
                             'terrain2' => $terrain2,

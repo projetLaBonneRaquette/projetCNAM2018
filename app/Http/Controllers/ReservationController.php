@@ -23,7 +23,13 @@ class ReservationController extends Controller
         $terrain2 = 'Terrain 2';
         $terrain3 = 'Terrain 3';
 
-        return view('home',['reserves' => $reserves,
+        $date = date("d-m-Y");
+        $time = date("H:i");
+        // $time = date("H:i", strtotime("-30 minutes"));
+
+        return view('home',['date' => $date,
+                            'time' => $time,
+                            'reserves' => $reserves,
                             'terrains' => $terrains,
                             'terrain1' => $terrain1,
                             'terrain2' => $terrain2,
