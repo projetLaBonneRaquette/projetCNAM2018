@@ -18,19 +18,7 @@ use App\Reservation;
 
 // Default
 Route::get('/', function () {
-<<<<<<< HEAD
 
-	
-	
-	    if (auth()->guest()) {
-        return view('welcome');
-        
-    }
-    	$users = User::all();
-
-	    return view('home');
-
-=======
 	$users = User::all();
     $terrain1 = 'Terrain 1';
     $terrain2 = 'Terrain 2';
@@ -52,20 +40,18 @@ Route::get('/', function () {
                             'terrain3' => $terrain3,
                             'adherants' => $adherants
                         ]);
->>>>>>> binsem
+    
+    return view('welcome');
 	
 });
 
 // Authentication
 Auth::routes();
-
 // Home
 Route::get('/home', 'HomeController@index')->name('home');
-
 // Créer un utilisateur
 Route::get('/create_user', 'CreateUserController@showRegistrationForm');
 Route::post('/store_user', 'CreateUserController@store');
-
 // Adherants
 Route::get('/adherants', 'AdherantsController@index');
 Route::get('/adherants/test', 'AdherantsController@test');
@@ -77,7 +63,6 @@ Route::put('/adherant/update/{adherant}', 'AdherantsController@update');
 Route::put('/delete/{adherant}', 'AdherantsController@destroy');
 //Route::post('/adherants/{adherant}', 'AdherantsController@update');
 //Route::get('adherants/delete/{id}', 'AdherantsController@destroy');
-
 // reservation
 Route::get('/reservation', 'ReservationController@index');
 Route::get('/reserve', 'ReservationController@createReserve');
