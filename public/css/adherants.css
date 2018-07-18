@@ -1,5 +1,9 @@
 .pagination {
-	margin-top: 1em;	
+	margin-top: 1em;
+}
+
+.w-75 {
+    width: 83.4% !important;
 }
 
 button.btn:active{
@@ -8,10 +12,11 @@ button.btn:active{
 
 #adherants{
 	top: -200px;
-	height: 700px;
-	max-width: 100%;
-	padding-top: 12em;
-	position:relative;
+	height: 1024px;
+    max-width: 100%;
+    margin-top: 2em;
+    padding-top: 12em;
+    position:relative;
 	margin-bottom: -14.5em;
 	background-size: cover;
 	background-position: 100%;
@@ -23,7 +28,7 @@ button.btn:active{
 @media (min-width: 768px){
   #adherants {
     top: -200px;
-    height: 800px;
+    height: 1024px;
     max-width: 100%;
     padding-top: 12em;
     position:relative;
@@ -38,7 +43,7 @@ button.btn:active{
 @media (min-width: 992px){
   #adherants {
     top: -200px;
-    height: 800px;
+    height: 1024px;
     max-width: 100%;
     padding-top: 12em;
     position:relative;
@@ -53,7 +58,7 @@ button.btn:active{
 @media (min-width: 1200px){
   #adherants {
     top: -200px;
-    height: 800px;
+    height: 1024px;
     max-width: 100%;
     padding-top: 12em;
     position:relative;
@@ -64,4 +69,8 @@ button.btn:active{
     background-attachment: fixed;
     background-image: url(/images/t2.jpg);
   }
+}
+
+#creatAdhe{
+    padding-top: 2em;
 }

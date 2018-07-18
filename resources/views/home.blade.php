@@ -59,7 +59,7 @@
                       </div>
                       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                           @if($terrain2)
-                            <table class="table">
+                            <table class="table table-sm">
                                 <!-- <caption>List of calendar</caption> -->
                                 <thead>
                                   <tr>
@@ -93,7 +93,7 @@
                       </div>
                       <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                           @if($terrain3)
-                            <table class="table">
+                            <table class="table table-sm">
                                 <!-- <caption>List of calendar</caption> -->
                                 <thead>
                                   <tr>

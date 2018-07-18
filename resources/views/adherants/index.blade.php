@@ -4,7 +4,7 @@
 <div id="adherants" class="container">
 
     @foreach ($adherants as $adherant)
-    <div class="card col-md-12">
+    <div class="card col-md-8 mx-auto">
         <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#{{$adherant->id}}" aria-expanded="false" aria-controls="collapse">
@@ -81,7 +81,7 @@
     @endforeach 
 
     <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
+        <ul class="pagination justify-content-end w-75">
             <li class="page-item disabled" id="pag_prev">
                 <a id="onclick" class="page-link" href="#" tabindex="-1">Previous</a>
             </li>
