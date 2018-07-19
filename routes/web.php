@@ -30,7 +30,9 @@ Route::get('/', function () {
     $date = date("d-m-Y");
     $time = date("H:i");
 
-	if ($users)
+	if (auth()->guest()) {
+        	return view('welcome');
+	}
         return view('home',['date' => $date,
                             'time' => $time,
                             'reserves' => $reserves,
@@ -40,8 +42,6 @@ Route::get('/', function () {
                             'terrain3' => $terrain3,
                             'adherants' => $adherants
                         ]);
-    
-    return view('welcome');
 	
 });
 
