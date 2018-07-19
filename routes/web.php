@@ -33,16 +33,17 @@ Route::get('/', function () {
 	if (auth()->guest()) {
         	return view('welcome');
 	}
-        return view('home',['date' => $date,
-                            'time' => $time,
-                            'reserves' => $reserves,
-                            'terrains' => $terrains,
-                            'terrain1' => $terrain1,
-                            'terrain2' => $terrain2,
-                            'terrain3' => $terrain3,
-                            'adherants' => $adherants
-                        ]);
-	
+    
+    return view('home',['date' => $date,
+                        'time' => $time,
+                        'reserves' => $reserves,
+                        'terrains' => $terrains,
+                        'terrain1' => $terrain1,
+                        'terrain2' => $terrain2,
+                        'terrain3' => $terrain3,
+                        'adherants' => $adherants
+                    ]);
+
 });
 
 // Authentication
@@ -50,7 +51,7 @@ Auth::routes();
 // Home
 Route::get('/home', 'HomeController@index')->name('home');
 // Créer un utilisateur
-Route::get('/create_user', 'CreateUserController@showRegistrationForm');
+Route::get('/create_user', 'CreateUserController@index');
 Route::post('/store_user', 'CreateUserController@store');
 // Adherants
 Route::get('/adherants', 'AdherantsController@index');
