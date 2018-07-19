@@ -66,24 +66,74 @@ class ReservationController extends Controller
     	$terrains = Terrain::all();
 
         return view('reservation.create',['adherants' => $adherants, 'terrains' => $terrains]);
+
+        // return view('reservation.create',['adherants' => $adherants, 'terrains' => $terrains]);
     }
 
     public function storeReserve(Request $request)
     {
 
-    	// store reservation
-    	$reserve = new Reservation;
-    	$reserve->date = request('date');
-    	$reserve->user_id = Auth::user()->id;
-    	$reserve->heure_debut = request('heure_debut');
+        $reserves = Reservation::all();
+        $adherants = Adherant::all();
+        $terrains = Terrain::all();
+
+
+        foreach ($reserves as $key => $reserve) {
+
+            if (request('terrain_id') == $reserve->terrain_id) {
+                
+                // check if the date
+                if (request('date') == $reserve->date) {
+                    
+                    if (request('heure_debut').":00" >= $reserve->heure_debut AND request('heure_debut').":00" <= $reserve->heure_fin){
+
+                        session()->flash('notification', 'le temps donné est déjà réservé');
+
+                        return view('reservation.create', ['adherants' => $adherants, 'terrains' => $terrains]);
+                    }
+                }
+            }
+
+            if (request('terrain_id') == 2) {
+                
+                // check if the date
+                if (request('date') == $reserve->date) {
+                    
+                    if (request('heure_debut').":00" >= $reserve->heure_debut AND request('heure_debut').":00" <= $reserve->heure_fin){
+
+                        session()->flash('notification', 'le temps donné est déjà réservé');
+
+                        return view('reservation.create', ['adherants' => $adherants, 'terrains' => $terrains]);
+                    }
+                }
+            }
+
+            if (request('terrain_id') == 3) {
+                
+                // check if the date
+                if (request('date') == $reserve->date) {
+                    
+                    if (request('heure_debut').":00" >= $reserve->heure_debut AND request('heure_debut').":00" <= $reserve->heure_fin){
+
+                        session()->flash('notification', 'le temps donné est déjà réservé');
+
+                        return view('reservation.create', ['adherants' => $adherants, 'terrains' => $terrains]);
+                    }
+                }
+            }
+
+        }
+
+        // store reservation
+        $reserve = new Reservation;
+        $reserve->date = request('date');
+        $reserve->user_id = Auth::user()->id;
+        $reserve->heure_debut = request('heure_debut');
     	$reserve->heure_fin = request('heure_fin');
     	$reserve->terrain_id = request('terrain_id');
     	$reserve->adherant_id = request('adherant_id');
     	$reserve->save();
 
-        $terrains = Terrain::all();
-
         return redirect('/reservation');
-        // return view('reservation.index',['reserve' => $reserve, 'terrains' => $terrains]);
     }
 }

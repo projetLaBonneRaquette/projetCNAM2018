@@ -21,7 +21,7 @@
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                        @if($terrain1)
+                          @if($terrain1)
                             <table class="table table-sm">
                                 <!-- <caption>List of calendar</caption> -->
                                 <thead>
@@ -38,16 +38,14 @@
                                         @if($reserve->terrain_id == $terrain->id)
                                             @foreach ($adherants as $adherant)
                                             @if($reserve->adherant_id == $adherant->id)
-                                                @if($reserve->heure_debut >= $time)
-                                                <tbody>
-                                                  <tr>
-                                                    <td>{{date("D", strtotime($reserve->date))}} {{date("d-m-Y", strtotime($reserve->date))}}</td>
-                                                    <td>{{$adherant->first_name}} {{$adherant->last_name}}</td>
-                                                    <td>{{$reserve->heure_debut}}</td>
-                                                    <td>{{$reserve->heure_fin}}</td>
-                                                  </tr>
-                                                </tbody>
-                                                @endif
+                                            <tbody>
+                                              <tr>
+                                                <td>{{date("D", strtotime($reserve->date))}} {{date("d-m-Y", strtotime($reserve->date))}}</td>
+                                                <td>{{$adherant->first_name}} {{$adherant->last_name}}</td>
+                                                <td>{{$reserve->heure_debut}}</td>
+                                                <td>{{$reserve->heure_fin}}</td>
+                                              </tr>
+                                            </tbody>
                                             @endif
                                             @endforeach
                                         @endif
@@ -63,6 +61,7 @@
                                 <!-- <caption>List of calendar</caption> -->
                                 <thead>
                                   <tr>
+                                        <th scope="col">Date</th>
                                         <th scope="col">Nom</th>
                                         <th scope="col">Heure debut</th>
                                         <th scope="col">Heure fin</th>
@@ -97,6 +96,7 @@
                                 <!-- <caption>List of calendar</caption> -->
                                 <thead>
                                   <tr>
+                                        <th scope="col">Date</th>
                                         <th scope="col">Nom</th>
                                         <th scope="col">Heure debut</th>
                                         <th scope="col">Heure fin</th>
