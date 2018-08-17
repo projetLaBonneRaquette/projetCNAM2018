@@ -55,11 +55,14 @@
                                 <a class="nav-link" href="/adherants">adherants <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/adherant/create">Creer <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/adherant/create">Créer adherant <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/reserve">réservé <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <!-- <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> -->
-                                <a class="nav-link" href="/create_user">{{ __('Register') }}</a>
+                                <a class="nav-link" href="/create_user">{{ __('Register utilisateur') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -86,7 +89,10 @@
                                 <a class="nav-link" href="/adherants">adherants <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/adherant/create">Creer <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/adherant/create">Créer adherant <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/reserve">réservé <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

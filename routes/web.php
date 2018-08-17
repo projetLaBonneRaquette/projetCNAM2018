@@ -18,40 +18,42 @@ use App\Reservation;
 
 // Default
 Route::get('/', function () {
-
-	$users = User::all();
+    $users = User::all();
     $terrain1 = 'Terrain 1';
     $terrain2 = 'Terrain 2';
     $terrain3 = 'Terrain 3';
     $terrains = Terrain::all();
-	$adherants = Adherant::all();
+    $adherants = Adherant::all();
     $reserves = Reservation::all();
 
     $date = date("d-m-Y");
     $time = date("H:i");
 
-	if (auth()->guest()) {
-        	return view('welcome');
-	}
-        return view('home',['date' => $date,
-                            'time' => $time,
-                            'reserves' => $reserves,
-                            'terrains' => $terrains,
-                            'terrain1' => $terrain1,
-                            'terrain2' => $terrain2,
-                            'terrain3' => $terrain3,
-                            'adherants' => $adherants
-                        ]);
-	
+    if (auth()->guest()){
+       return view('welcome');
+    }
+    
+    return view('home',['date' => $date,
+                        'time' => $time,
+                        'reserves' => $reserves,
+                        'terrains' => $terrains,
+                        'terrain1' => $terrain1,
+                        'terrain2' => $terrain2,
+                        'terrain3' => $terrain3,
+                        'adherants' => $adherants
+                    ]);
 });
 
 // Authentication
 Auth::routes();
+
 // Home
 Route::get('/home', 'HomeController@index')->name('home');
+
 // Créer un utilisateur
-Route::get('/create_user', 'CreateUserController@showRegistrationForm');
+Route::get('/create_user', 'CreateUserController@index');
 Route::post('/store_user', 'CreateUserController@store');
+
 // Adherants
 Route::get('/adherants', 'AdherantsController@index');
 Route::get('/adherants/test', 'AdherantsController@test');
@@ -63,6 +65,7 @@ Route::put('/adherant/update/{adherant}', 'AdherantsController@update');
 Route::put('/delete/{adherant}', 'AdherantsController@destroy');
 //Route::post('/adherants/{adherant}', 'AdherantsController@update');
 //Route::get('adherants/delete/{id}', 'AdherantsController@destroy');
+
 // reservation
 Route::get('/reservation', 'ReservationController@index');
 Route::get('/reserve', 'ReservationController@createReserve');

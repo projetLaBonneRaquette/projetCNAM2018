@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class CreateUserController extends Controller
 {
@@ -20,23 +22,29 @@ class CreateUserController extends Controller
 	/**
      * Afficher le formulaire d'inscription
     */
-    public function showRegistrationForm()
+    public function index()
     {
-        return view('auth.register');
+        return view('user.create');
     }
 
  	/**
      * Stocker l'utilisateur
     */
-    public function store()
+    public function store(Request $request)
     {
+
         $this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|confirmed'
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
         ]);
 
-        $user = User::create(request(['name', 'email', 'password']));
+        $user = new User;
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->password = Hash::make(request('password'));
+        $user->save();
+
         // auth()->login($user);
         
         return redirect()->to('/');
