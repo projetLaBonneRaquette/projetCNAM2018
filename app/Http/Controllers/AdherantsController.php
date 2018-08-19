@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Adherant;
 use Auth;
+use App\Reservation;
+
 
 use DB;
 
@@ -19,7 +21,8 @@ class AdherantsController extends Controller
     public function index()
     {
     	$adherants  = Adherant::all();
-        return view('adherants.index',compact('adherants'));
+        $reserves = Reservation::all();
+        return view('adherants.index',['adherants' => $adherants,'reserves' => $reserves,]);
     }
 
     public function userId($id)

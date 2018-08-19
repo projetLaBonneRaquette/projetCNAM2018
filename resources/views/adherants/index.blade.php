@@ -20,8 +20,24 @@
 
                 <!-- <a href='/adherants/edit/{{$adherant->id}}'>Modifier</a> -->
                 <!-- Button trigger modal -->
+                @foreach($reserves as $reserve)
+                    @if($reserve->adherant_id == $adherant->id)
+                    <div class="card-header" id="headingTwo">
+                        <center>
+                    Entrainement de {{$reserve->heure_debut}} à {{$reserve->heure_fin}}
+ <br>
+ </center>
+</div>
+                    @endif
+
+
+
+
+                @endforeach
+
                 @if(!Auth::guest())
                 @if(Auth::user()->id == $adherant->user_id)
+                <br>
                 <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#{{$adherant->last_name}}">Modifier</button>
                 @endif
                 @endif
