@@ -4,13 +4,15 @@
 
 @if(Auth::user())
 
+ 
+
 <div id="home_container" class="container">
     <div class="row justify-content-center">
 
         <div class="col-md-8" style="margin-top: 2em;">
             <div class="card">
                 <div class="card-header text-white bg-info">
-                    <h3 class="panel-title">Réservation {{ date("D M j") }}</h3>
+                    <h3 class="panel-title">Réservation du <I>{{ date("D M j") }} </I></h3>
                 </div>
                 <div class="card-body">
                     <nav>
@@ -34,6 +36,7 @@
                                   </tr>
                                 </thead>
                                 @foreach ($reserves as $reserve)
+                                @if(date("d-m-Y") == date("d-m-Y", strtotime($reserve->date))  )
 
                                     @foreach ($terrains as $terrain)
                                     @if($terrain->nom == $terrain1)
@@ -55,6 +58,7 @@
                                         @endif
                                     @endif
                                     @endforeach
+                                    @endif
                                 @endforeach
                             </table>
                         @endif
@@ -110,6 +114,7 @@
                                   </tr>
                                 </thead>
                                 @foreach ($reserves as $reserve)
+                                @if(date("d-m-Y") == date("d-m-Y", strtotime($reserve->date))  )
                                     @foreach ($terrains as $terrain)
                                     @if($terrain->nom == $terrain3)
                                         @if($reserve->terrain_id == $terrain->id)
@@ -128,6 +133,7 @@
                                         @endif
                                     @endif
                                     @endforeach
+                                    @endif
                                 @endforeach
                             </table>
                         @endif
