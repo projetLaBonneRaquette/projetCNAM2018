@@ -3,13 +3,14 @@
 @section('content')
 
 @if(Auth::user())
+
 <div id="home_container" class="container">
     <div class="row justify-content-center">
 
         <div class="col-md-8" style="margin-top: 2em;">
             <div class="card">
                 <div class="card-header text-white bg-info">
-                    <h3 class="panel-title">Réservation</h3>
+                    <h3 class="panel-title">Réservation {{ date("D M j") }}</h3>
                 </div>
                 <div class="card-body">
                     <nav>
@@ -33,11 +34,14 @@
                                   </tr>
                                 </thead>
                                 @foreach ($reserves as $reserve)
+
                                     @foreach ($terrains as $terrain)
                                     @if($terrain->nom == $terrain1)
                                         @if($reserve->terrain_id == $terrain->id)
                                             @foreach ($adherants as $adherant)
                                             @if($reserve->adherant_id == $adherant->id)
+                                           
+
                                             <tbody>
                                               <tr>
                                                 <td>{{date("D", strtotime($reserve->date))}} {{date("d-m-Y", strtotime($reserve->date))}}</td>
@@ -68,6 +72,7 @@
                                   </tr>
                                 </thead>
                                 @foreach ($reserves as $reserve)
+                                @if(date("d-m-Y") == date("d-m-Y", strtotime($reserve->date))  )
                                     @foreach ($terrains as $terrain)
                                     @if($terrain->nom == $terrain2)
                                         @if($reserve->terrain_id == $terrain->id)
@@ -85,7 +90,9 @@
                                             @endforeach
                                         @endif
                                     @endif
+
                                     @endforeach
+                                                       @endif
                                 @endforeach
                             </table>
                         @endif
@@ -110,7 +117,7 @@
                                             @if($reserve->adherant_id == $adherant->id)
                                             <tbody>
                                               <tr>
-                                                <td>{{date("D", strtotime($reserve->date))}} {{date("d-m-Y", strtotime($reserve->date))}}</td>
+                                                <td>{{date("D", strtotime($reserve->date))}} {{date("Y-m-d", strtotime($reserve->date))}}</td>
                                                 <td>{{$adherant->first_name}} {{$adherant->last_name}}</td>
                                                 <td>{{$reserve->heure_debut}}</td>
                                                 <td>{{$reserve->heure_fin}}</td>
