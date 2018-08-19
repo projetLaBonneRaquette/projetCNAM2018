@@ -42,9 +42,7 @@
                     <option value="{{$adherant->id}}">{{ $adherant->first_name }} {{ $adherant->last_name }}</option>
                   @endif
 
-                  @if(Auth::user()->admin)
-                    <option value="{{$adherant->id}}">{{ $adherant->first_name }} {{ $adherant->last_name }}</option>
-                  @endif
+
                   
                 @endforeach
               </select>

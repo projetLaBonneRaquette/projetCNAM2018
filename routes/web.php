@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,12 +9,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 use App\User;
 use App\Terrain;
 use App\Adherant;
 use App\Reservation;
-
 // Default
 Route::get('/', function () {
     $users = User::all();
@@ -25,12 +22,10 @@ Route::get('/', function () {
     $terrains = Terrain::all();
     $adherants = Adherant::all();
     $reserves = Reservation::all();
-
     $date = date("d-m-Y");
     $time = date("H:i");
-
-    if (auth()->guest()){
-       return view('welcome');
+    if (auth()->guest()) {
+            return view('welcome');
     }
     
     return view('home',['date' => $date,
@@ -43,17 +38,13 @@ Route::get('/', function () {
                         'adherants' => $adherants
                     ]);
 });
-
 // Authentication
 Auth::routes();
-
 // Home
 Route::get('/home', 'HomeController@index')->name('home');
-
 // Créer un utilisateur
 Route::get('/create_user', 'CreateUserController@index');
 Route::post('/store_user', 'CreateUserController@store');
-
 // Adherants
 Route::get('/adherants', 'AdherantsController@index');
 Route::get('/adherants/test', 'AdherantsController@test');
@@ -65,7 +56,6 @@ Route::put('/adherant/update/{adherant}', 'AdherantsController@update');
 Route::put('/delete/{adherant}', 'AdherantsController@destroy');
 //Route::post('/adherants/{adherant}', 'AdherantsController@update');
 //Route::get('adherants/delete/{id}', 'AdherantsController@destroy');
-
 // reservation
 Route::get('/reservation', 'ReservationController@index');
 Route::get('/reserve', 'ReservationController@createReserve');
