@@ -12,7 +12,7 @@
         <div class="col-md-8" style="margin-top: 2em;">
             <div class="card">
                 <div class="card-header text-white bg-info">
-                    <h3 class="panel-title">Réservation du <I>{{ date("D M j") }} </I></h3>
+                    <h3 class="panel-title">Les réservation du jour</h3>
                 </div>
                 <div class="card-body">
                     <nav>
