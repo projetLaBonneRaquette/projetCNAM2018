@@ -45,7 +45,7 @@
     background-image: url('../images/tennis1.jpg');
 
     /* Full height */
-    height: 270%; 
+    height: 500%; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -54,6 +54,9 @@
     background-size: cover;
     padding: 30px;
     text-align: center;
+  }
+  #txtUnderP2{
+    height: 200%;
   }
 }
 
@@ -242,10 +245,62 @@ span {
 
 #contact{
   padding: 60px 0;
-  height: 800px;
 }
 
 .py-4{
   padding-bottom: 0px !important;
     padding-top: 0px !important;
+}
+
+#footer {
+  color: white;
+  font-size: 14px;
+  background: white;
+  padding: 0 0 15px 0;
+}
+
+#footer .footer-top {
+  background: white;
+  padding: 30px 0 20px 0;
+}
+
+#footer .container{
+  text-align: center;
+}
+
+#footer .footer-top .social-links{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*#footer .footer-top .social-links a {
+  color: #eee;
+  width: 36px;
+  height: 36px;
+  line-height: 1;
+  padding: 8px 0;
+  font-size: 18px;
+  transition: 0.3s;
+  background: #857979;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+}*/
+
+.fa {
+
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.copyright{
+  color: black;
+}
+
+hr{
+  margin-left: 200px;
+    margin-right: 200px;
 }

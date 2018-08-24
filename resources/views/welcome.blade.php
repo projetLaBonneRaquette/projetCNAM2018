@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="../css/homePage.css">
 
 
+
   <style>
   
 
@@ -49,7 +50,7 @@
   </a>
 </div>
 
-  <div style="height:200px;background-color:white;font-size:25px">
+  <div style="background-color:white;font-size:25px">
     <h2 style="text-align: center">Notre histoire </h2>
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus semper neque in tincidunt. Maecenas leo mauris, dignissim sed vehicula quis, lacinia quis leo. Duis eu diam lorem. Donec malesuada dui id semper tempus. Etiam quam risus, scelerisque vel nulla at, sollicitudin porta erat.
@@ -281,6 +282,15 @@
   <div class = "thumbnail">
    <img src = "../images/user.png" alt = "Generic placeholder thumbnail">
  </div>
+ <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
  <div class = "caption">
@@ -300,15 +310,22 @@
 
 
 </div>
-<div style="height:200px;background-color:white;font-size:25px;text-align:center">
+<div style="background-color:white;font-size:25px;text-align:center" id="txtUnderP2">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla cursus semper neque in tincidunt. Maecenas leo mauris, dignissim sed vehicula quis, lacinia quis leo. Duis eu diam lorem. Donec malesuada dui id semper tempus. Etiam quam risus, scelerisque vel nulla at, sollicitudin porta erat.
 </div>
 
+<hr>
 
-<div class="parallax3">
 
- 
-  <section id="contact" class="section-bg wow fadeInUp">
+<!-- <div class="parallax3">
+
+</div> -->
+
+<!-----------------------------------------------------------
+Footer Section
+------------------------------------------------------------> 
+<footer id="footer">
+    <section id="contact" class="section-bg wow fadeInUp">
     <div class="container">
 
       <div class="section-header">
@@ -345,7 +362,31 @@
 
     </div>
   </section>
-</div>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row centered">
+
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>CNAM.</strong> All Rights Reserved
+    </div>
+  </div>
+</footer>
+<!-- #footer -->
+
 
 
 </body>

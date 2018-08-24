@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/adherants.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -125,51 +126,12 @@
   <!-----------------------------------------------------------
     Contact-us Section
   ------------------------------------------------------------>  
-
-  <section id="contact" class="section-bg wow fadeInUp">
-    <div class="container">
-
-      <div class="section-header">
-        <h3>Contact Us</h3>
-      </div>
-
-      <div class="row contact-info">
-
-        <div class="col-md-4">
-          <div class="contact-address">
-            <i class="ion-ios-location-outline"></i>
-            <h3>Address</h3>
-            <address>rue de rue</address>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="contact-phone">
-            <i class="ion-ios-telephone-outline"></i>
-            <h3>Phone Number</h3>
-            <p><a href="#">00 00 00 00 00</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="contact-email">
-            <i class="ion-ios-email-outline"></i>
-            <h3>Email</h3>
-            <p><a href="mailto:info@example.com">info@example.com</a></p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
   <!-- #contact -->
 
   <!-----------------------------------------------------------
   Footer Section
   ------------------------------------------------------------> 
-  @include('partials.footer')
+
   
   <!-- Scripts -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
