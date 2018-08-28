@@ -33,8 +33,11 @@ class AdherantsController extends Controller
 
     public function show( Adherant $adherant)
     {
-       //$adherant = Adherant::find($id);
-        return view('adherants.show',compact('adherant'));
+        $reserves = Reservation::all();
+        
+       
+        return view('adherants.show',['reserves' => $reserves,'adherant' => $adherant]);
+       
     }
 
     public function create()

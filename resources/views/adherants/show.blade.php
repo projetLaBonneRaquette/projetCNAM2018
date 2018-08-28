@@ -1,19 +1,35 @@
-@include('layout.layout')
+@extends('layouts.app')
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-">
-			<h1>{{$adherant->last_name}} {{$adherant->first_name}}</h1>
-			<h4>{{$adherant->email}}</h4>
-			<h4>{{$adherant->licence_number}}</h4>
-			<h4>créé à : {{$adherant->created_at}}</h4>
-			<h4>mis à jour à : {{$adherant->updated_at}}</h4>
+@section('content')
 
-			<a href='delete/{{ $adherant->id }}'>Delete</a>
-			<a href='/adherants/edit/{{$adherant->id}}'>Modifier</a>
+
+
+	<div id="adherants" class="container">
+		<div class="card col-md-8 mx-auto" style="
+    text-align: center;
+    height: 60px;
+    color: white;
+    background: rgba(0,123,255,.60);
+    text-transform: uppercase;
+">  <p style="    padding-top: 20px;">Liste des entraînement pour {{$adherant->first_name}} {{$adherant->last_name}} <p></div>
+	<br>
+		<div class="card col-md-8 mx-auto" style="background-color: transparent; border: none;">
+		
+
+@foreach($reserves as $reserve)
+
+		<div class="card-header" id="headingTwo" style="background-color: white;">
+			<center>
+				Entrainement le <b>{{date("d-m-Y", strtotime($reserve->date))}}</b> de <b>{{$reserve->heure_debut}}</b> à <b>{{$reserve->heure_fin}}</b>
+
+
+			</center>
 		</div>
-	</div>
+		<br>
+
+
+@endforeach
+</div>
 </div>
 
-</body>
-</html>
+@endsection

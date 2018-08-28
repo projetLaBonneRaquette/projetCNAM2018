@@ -39,6 +39,7 @@
                 @if(Auth::user()->id == $adherant->user_id)
                 <br>
                 <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#{{$adherant->last_name}}">Modifier</button>
+                <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal"><a href="adherants/{{$adherant->id}}">Entrainements </a></button>
                 @endif
                 @endif
             </div>
