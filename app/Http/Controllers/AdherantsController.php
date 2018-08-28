@@ -21,8 +21,8 @@ class AdherantsController extends Controller
     public function index()
     {
     	$adherants  = Adherant::all();
-        $reserves = Reservation::all();
-        return view('adherants.index',['adherants' => $adherants,'reserves' => $reserves,]);
+      
+        return view('adherants.index',['adherants' => $adherants]);
     }
 
     public function userId($id)
