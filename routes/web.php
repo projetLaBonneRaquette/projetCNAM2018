@@ -62,3 +62,4 @@ Route::get('/reserve', 'ReservationController@createReserve');
 Route::post('/reserve', 'ReservationController@storeReserve');
 Route::get('/terrain', 'ReservationController@createTerra');
 Route::post('/terrain', 'ReservationController@storeTerra');
+Route::put('../delete/{reservation}', 'ReservationController@destroy');

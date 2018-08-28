@@ -137,3 +137,4 @@ class ReservationController extends Controller
         return redirect('/reservation');
     }
 }
+
